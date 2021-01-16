@@ -1,0 +1,173 @@
+
+12월 20, 2019 12:37:56.25 NEW SESSION
+12월 20, 2019 12:37:56.25 [7488:6632:1220/123756.223:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 20, 2019 13:16:53.67 [7488:8076:1220/131653.668:ERROR:CONSOLE(51)] "elements are not in the same shadow dom", source: devtools://devtools/bundled/ui/ARIAUtils.js (51)
+12월 20, 2019 13:16:53.67 [7488:8076:1220/131653.668:ERROR:CONSOLE(51)] "elements are not in the same shadow dom", source: devtools://devtools/bundled/ui/ARIAUtils.js (51)
+
+12월 22, 2019 10:23:00.48 NEW SESSION
+12월 22, 2019 10:23:00.48 [8828:13548:1222/102300.476:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 10:52:27.53 [8828:2236:1222/105227.539:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 10:52:28.75 [8828:13548:1222/105227.635:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 10:52:29.75 [8828:13548:1222/105229.751:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 10:52:30.21 [8828:13548:1222/105230.211:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 12:34:11.64 [8828:13548:1222/123411.641:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 15:12:46.70 [8828:2236:1222/151246.702:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 15:12:46.72 [8828:13548:1222/151246.721:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 15:12:46.73 [8828:10552:1222/151246.738:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+12월 22, 2019 16:33:41.34 [8828:13548:1222/163341.342:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 18:22:27.84 [8828:2236:1222/182227.838:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:22:28.74 [8828:13548:1222/182227.863:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 22, 2019 18:22:28.76 [8828:13548:1222/182227.896:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+12월 22, 2019 18:22:30.24 [8828:13548:1222/182230.241:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:22:51.60 [8828:2236:1222/182251.600:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:23:13.37 [8828:13548:1222/182313.373:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:23:40.88 [8828:2236:1222/182340.885:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:25:01.27 [8828:13548:1222/182501.275:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:25:15.33 [8828:2236:1222/182515.333:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:28:16.20 [8828:2236:1222/182816.202:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:28:28.02 [8828:13548:1222/182828.023:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:35:40.32 [8828:13548:1222/183540.325:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:36:07.74 [8828:2236:1222/183607.739:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:45:40.32 [8828:13548:1222/184540.328:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:46:07.74 [8828:2236:1222/184607.742:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 18:55:40.33 [8828:13548:1222/185540.329:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 22, 2019 18:56:07.74 [8828:2236:1222/185607.745:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 22, 2019 19:00:36.81 [8828:13548:1222/190036.815:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -101
+12월 22, 2019 21:00:53.79 [8828:13548:1222/210053.797:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -101
+
+12월 24, 2019 12:56:32.18 NEW SESSION
+12월 24, 2019 12:56:32.18 [7856:12344:1224/125632.164:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 24, 2019 13:14:21.39 [7856:13720:1224/131421.376:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+12월 24, 2019 13:35:30.00 [7856:12344:1224/133530.002:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+12월 24, 2019 13:35:54.43 [7856:12344:1224/133554.430:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+
+12월 26, 2019 11:25:17.30 NEW SESSION
+12월 26, 2019 11:25:17.30 [4928:8988:1226/112517.251:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 26, 2019 11:49:02.71 [4928:9976:1226/114902.716:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 26, 2019 12:58:24.41 [4928:8988:1226/125824.413:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 26, 2019 13:51:39.83 [4928:8988:1226/135139.837:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 26, 2019 13:51:40.78 [4928:9976:1226/135139.846:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 26, 2019 13:51:40.78 [4928:10824:1226/135139.885:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+12월 26, 2019 13:51:40.78 [4928:8988:1226/135139.897:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+
+12월 29, 2019 12:08:15.42 NEW SESSION
+12월 29, 2019 12:08:15.42 [9004:9528:1229/120815.392:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 29, 2019 15:01:33.73 [9004:5576:1229/150132.624:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+12월 29, 2019 15:01:33.74 [9004:2332:1229/150132.624:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 29, 2019 15:01:33.74 [9004:9528:1229/150132.687:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 29, 2019 15:01:33.74 [9004:9528:1229/150132.718:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+12월 29, 2019 18:00:28.35 [9004:9528:1229/180028.352:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+12월 30, 2019 08:57:39.21 NEW SESSION
+12월 30, 2019 08:57:39.21 [9936:14252:1230/085739.204:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 30, 2019 08:57:39.21 [9936:14252:1230/085739.211:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+12월 30, 2019 09:08:56.34 [9936:14252:1230/090856.346:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 30, 2019 10:08:27.18 [9936:9948:1230/100827.179:ERROR:CONSOLE(51)] "elements are not in the same shadow dom", source: devtools://devtools/bundled/ui/ARIAUtils.js (51)
+12월 30, 2019 10:08:27.18 [9936:9948:1230/100827.181:ERROR:CONSOLE(51)] "elements are not in the same shadow dom", source: devtools://devtools/bundled/ui/ARIAUtils.js (51)
+12월 30, 2019 11:52:53.52 [9936:14252:1230/115253.522:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 30, 2019 15:19:02.47 [9936:14252:1230/151902.477:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 30, 2019 16:35:02.89 [9936:9948:1230/163502.892:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+12월 30, 2019 16:35:05.52 [9936:14252:1230/163505.528:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+
+12월 31, 2019 16:19:59.98 NEW SESSION
+12월 31, 2019 16:19:59.98 [8496:4036:1231/161959.878:ERROR:socket_stream.cc(218)] Closing stream with result -2
+12월 31, 2019 16:47:29.99 [8496:4036:1231/164729.992:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+1월 01, 2020 13:16:08.98 NEW SESSION
+1월 01, 2020 13:16:08.98 [1112:13868:0101/131608.982:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+1월 15, 2020 14:22:49.43 NEW SESSION
+1월 15, 2020 14:22:49.43 [3980:1408:0115/142249.390:ERROR:socket_stream.cc(218)] Closing stream with result -2
+1월 15, 2020 14:24:36.97 [3980:1408:0115/142436.978:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 14:24:50.28 [3980:1408:0115/142450.282:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+1월 15, 2020 14:24:52.39 [3980:1408:0115/142452.395:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 14:26:05.85 [3980:1408:0115/142605.849:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+1월 15, 2020 14:26:15.74 [3980:1408:0115/142615.743:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+1월 15, 2020 14:26:48.27 [3980:1408:0115/142648.273:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+1월 15, 2020 14:26:53.31 [3980:1408:0115/142653.310:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+1월 15, 2020 14:26:59.76 [3980:1408:0115/142659.765:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 14:36:59.77 [3980:1408:0115/143659.775:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 14:46:59.78 [3980:1408:0115/144659.782:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 14:51:36.09 [3980:5132:0115/145136.089:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 14:52:02.36 [3980:5132:0115/145202.360:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 14:52:55.85 [3980:5132:0115/145255.854:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 14:54:18.64 [3980:5132:0115/145418.647:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 15:04:49.90 [3980:1408:0115/150449.904:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 15:04:50.69 [3980:5132:0115/150449.904:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 15:12:12.40 [3980:5132:0115/151212.402:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+1월 15, 2020 15:14:32.29 [3980:1408:0115/151432.296:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+1월 15, 2020 15:14:52.80 [3980:1408:0115/151452.801:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 15:15:34.30 [3980:1408:0115/151534.305:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -105
+1월 15, 2020 15:20:12.49 [3980:1408:0115/152012.489:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+1월 15, 2020 15:25:52.31 [3980:1408:0115/152552.311:ERROR:socket_stream.cc(218)] Closing stream with result -2
+1월 15, 2020 15:25:55.68 [3980:1408:0115/152555.686:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -21
+
+1월 16, 2020 07:15:59.43 NEW SESSION
+1월 16, 2020 07:15:59.43 [8744:11312:0116/071559.415:ERROR:mcs_client.cc(758)] Received close command, resetting connection.
+1월 16, 2020 07:21:00.23 [8744:11312:0116/072100.238:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+2월 10, 2020 14:38:50.19 NEW SESSION
+2월 10, 2020 14:38:50.19 [2180:13992:0210/143850.185:ERROR:socket_stream.cc(218)] Closing stream with result -2
+2월 10, 2020 15:13:39.59 [2180:13992:0210/151339.598:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+2월 10, 2020 15:13:40.04 [2180:13992:0210/151340.047:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+2월 10, 2020 15:13:40.04 [2180:11872:0210/151340.049:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+2월 10, 2020 15:19:55.43 [2180:13992:0210/151955.438:ERROR:socket_stream.cc(218)] Closing stream with result -2
+2월 10, 2020 17:42:41.47 [7928:12508:0210/174241.473:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+5월 01, 2020 23:46:39.04 NEW SESSION
+5월 01, 2020 23:46:39.04 [14772:16896:0501/234639.041:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 02, 2020 24:09:31.67 [14772:8308:0502/000931.676:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 02, 2020 03:09:33.52 [14772:8308:0502/030933.521:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 02, 2020 10:25:13.59 [14772:8308:0502/102513.594:ERROR:checkin_request.cc(223)] Failed to get checkin response. Fetcher failed. Retrying.
+5월 02, 2020 10:25:13.75 [14772:11488:0502/102513.759:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 02, 2020 10:25:13.98 [14772:8308:0502/102513.983:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 02, 2020 12:33:27.25 [14772:8308:0502/123327.252:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 02, 2020 14:35:02.11 [14772:16896:0502/143502.113:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:35:03.18 [14772:16896:0502/143503.180:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:35:08.03 [14772:16896:0502/143508.033:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:35:09.76 [14772:16896:0502/143509.768:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:35:12.91 [14772:16896:0502/143512.917:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:36:19.97 [14772:16896:0502/143619.977:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 14:36:22.46 [14772:16896:0502/143622.459:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.908 s for first_image_paint 0.881 s
+5월 02, 2020 16:04:58.42 [14772:8308:0502/160458.429:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 02, 2020 19:05:01.46 [14772:11488:0502/190501.465:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 02, 2020 19:05:01.68 [14772:8308:0502/190501.570:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 02, 2020 19:05:31.43 [14772:8308:0502/190531.439:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+
+5월 04, 2020 15:37:47.11 NEW SESSION
+5월 04, 2020 15:37:47.11 [18132:19788:0504/153747.111:ERROR:browser_switcher_service.cc(238)] XXX Init()
+5월 04, 2020 21:50:04.87 [18132:18980:0504/215004.867:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 04, 2020 22:29:40.40 [18132:18980:0504/222940.406:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 04, 2020 22:29:55.50 [18132:18980:0504/222955.507:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -103
+5월 04, 2020 22:30:05.18 [18132:18980:0504/223005.183:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -101
+5월 04, 2020 22:30:12.84 [18132:18980:0504/223012.846:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+5월 04, 2020 22:51:49.60 [18132:18980:0504/225149.603:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+5월 05, 2020 01:52:02.77 [18132:4820:0505/015202.769:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 01:52:07.58 [18132:18980:0505/015207.583:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+5월 05, 2020 01:52:12.22 [18132:4820:0505/015212.224:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 01:52:13.39 [18132:18980:0505/015213.393:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 05, 2020 01:52:16.46 [18132:4820:0505/015216.469:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 01:52:19.64 [18132:4820:0505/015219.640:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 04:03:14.79 [18132:18980:0505/040314.790:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 05, 2020 04:03:14.99 [18132:4820:0505/040314.997:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 04:03:18.58 [18132:18980:0505/040318.587:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 05, 2020 06:12:01.97 [18132:19788:0505/061201.970:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.414 s for first_image_paint 0.398 s
+5월 05, 2020 06:12:02.97 [18132:19788:0505/061202.976:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.414 s for first_image_paint 0.398 s
+5월 05, 2020 06:12:04.04 [18132:19788:0505/061204.048:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.414 s for first_image_paint 0.398 s
+5월 05, 2020 06:12:05.19 [18132:19788:0505/061205.194:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.414 s for first_image_paint 0.398 s
+5월 05, 2020 06:12:05.56 [18132:19788:0505/061205.563:ERROR:page_load_metrics_update_dispatcher.cc(165)] Invalid first_paint 0.414 s for first_image_paint 0.398 s
+5월 05, 2020 06:43:45.25 [18132:18980:0505/064345.257:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 05, 2020 09:43:49.73 [18132:4820:0505/094349.731:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 09:43:53.76 [18132:18980:0505/094353.762:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 05, 2020 09:43:57.03 [18132:4820:0505/094357.034:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 10:18:06.86 [18132:4820:0505/101806.868:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 10:18:06.88 [18132:4820:0505/101806.886:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 10:32:24.85 [18132:18980:0505/103224.857:ERROR:socket_stream.cc(218)] Closing stream with result -2
+5월 05, 2020 10:48:32.71 [18132:4820:0505/104832.716:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 10:48:43.00 [18132:18980:0505/104843.000:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+5월 05, 2020 10:48:43.00 [18132:4820:0505/104843.005:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 05, 2020 10:48:43.00 [18132:4820:0505/104843.008:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+
+10월 13, 2020 16:33:37.61 NEW SESSION
+10월 13, 2020 16:33:37.61 [18376:3952:1013/163337.612:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -118
+10월 13, 2020 16:43:04.67 [1013/164304.667:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+    window.onload=function(){/* window.onload = function(){ 시작시 실행될 내용 } 
+      <페이지가 로드되면 자동으로 실행되는 함수를 구현>할 때엔
+            전역 콜백함수인 window.onload 함수를 사용합니다.*/
+    
+    var val = location.search;
+	alert(val);
+	 /*자바스크립트로 사이트 URL이 보이는
+        get 방식일 경우 
+        location.search 을 이용해서
+        URL의 파라미터를 가져 올 수 있다
+        location.search는 
+        URI 정보를 모두 가져온다.
+        */
+    }
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+
+
+</body>
+</html>

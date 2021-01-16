@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript">
+	function createEle() {
+		let count;
+		var div = document.createElement("div"); // <div></div> 가 생성됨.
+		// 1번
+		/*
+		var attr = document.createAttribute("style");   // style="" 가 생성됨.
+		attr.nodeValue = "border:1px solid blue";   // style="border:1px solid blue" 가 생성됨.
+		div.setAttributeNode(attr); // <div style="border:1px solid blue"></div> 가 생성됨.
+		 */
+
+		// 2번
+		div.setAttribute("style", "border:1px dotted red");
+		console.log("div->", div);
+		var txt = document.createTextNode("엘리먼트 생성" + ":" + count++);
+		console.log("txt->", txt);
+		div.appendChild(txt); // <div style="border:1px solid blue">엘리먼트 생성</div>
+		// = div.textContent = "엘리먼트 생성";
+		console.log("div.appendChild(txt)->", div.appendChild(txt));
+		document.body.appendChild(div); // appendChild는 자식 요소로 들어가게 하는데 제일 밑의 자식 요소로 들어가게 함.
+
+		/*
+		    1. 엘리먼트 객체 생성 : createElement("String tagName");   // 해당 tagName으로 엘리먼트가 생성됨.
+		    2. 속성 추가
+		    2-1. 속성 생성 : createAttribute("String attrName");
+		         속성 추가 : setAttributeNode(Attr attr);   // 위에서 만들어준 Attribute 속성을 넣어준다.
+		    2-2. 한번에 생성 : setAttribute("String attr", "String value");
+		    3. text 객체 생성 : createTextNode("String text");
+		 */
+
+	}
+</script>
+</head>
+<body>
+
+	<button onclick="createEle();">엘리먼트 생성하기</button>
+
+
+</body>
+</html>

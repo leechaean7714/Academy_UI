@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>1. 기본 테이블 만들기</h1>
+	<table border="1" style="width: 300px;">
+		<tr style="background-color: gray;">
+			<th>컬럼1</th>
+			<th>컬럼2</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+	<hr />
+
+	<h1>2.주요 태그 사용</h1>
+
+	<table border="1">
+		<caption>테이블 제목</caption>
+		<colgroup>
+			<col width="100px" />
+			<col width="200px" />
+			<col width="300px" />
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th>컬럼1</th>
+				<th>컬럼2</th>
+				<th>컬럼3</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<hr />
+
+
+	<h1>3.테이블 병합하기</h1>
+
+	<table border="1">
+		<caption>병합 테이블</caption>
+
+		<thead>
+			<tr>
+				<th>컬럼1</th>
+				<th>컬럼2</th>
+				<th>컬럼3</th>
+				<th>컬럼4</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td rowspan="2">1 : 세로 (열) 합치기</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td colspan="2">7 : 가로 (행) 합치기</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="4">가로 (행) 합치기</td>
+
+			</tr>
+
+		</tfoot>
+	</table>
+
+
+
+	<table class="grieDscsn" border="1">
+		<caption>고충상담신청</caption>
+		<colgroup>
+			<col width="20%">
+			<col width="15%">
+			<col width="15%">
+			<col width="15%">
+			<col width="15%">
+			<col width="15%">
+		</colgroup>
+		<tbody>
+			<tr>
+			
+				<th rowspan="2">인적사항</th>
+				<th>소속</th>
+				<th>부서</th>
+				<th>계급</th>
+				<th>생년원일</th>
+				<th>성명</th>
+			</tr>
+			<tr>
+				<td><input type="text"/></td>
+				<td><input type="text"/></td>
+				<td><input type="text"/></td>
+				<td><input type="text"/></td>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>고충상담이유</th>
+				<td colspan="5"><textarea rows="5" cols="50"></textarea></td>
+			</tr>
+			<tr>
+				<th>필요조치</th>
+				<td colspan="5"><textarea rows="5" cols="50"></textarea></td>
+			</tr>
+			<tr>
+				<th>청구방법</th>
+				<td colspan="5"><textarea rows="5" cols="50"></textarea></td>
+			</tr>
+			<tr>
+				<th>첨부파일</th>
+				<td colspan="5">
+					<input type="text" id="grieFile01" class="cileText" readonly>
+					<div class="grieFile_input_div">
+						<a class="btnSubmit" href="#add_grieFile01">
+							<label for="add_grieFile01">
+								<i class="icon-search-2">찾아보기</i>
+							</label>
+						</a>
+						<input type="file" id="add_grieFile01" name="grieFile-1" class="hidden" onchange="javascript:document.getElementById(fileName1).value = this.value">
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<table border="1">
+	<caption>고충심사신청</caption>
+	<colgroup>
+	    <col width="20%">
+		<col width="15%">
+		<col width="15%">
+		<col width="15">
+		<col width="15">
+		<col width="15">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th rowspan="5">인적사항</th>
+			<th>소속</th>
+			<th>부서</th>
+			<th>계급</th>
+			<th>직별</th>
+			<th>성명</th>
+		</tr>
+		<tr>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+		</tr>
+		<tr>
+			<th>생년월일</th>
+			<th>최초임용</th>
+			<th>현계급임용</th>
+			<th>현지역전입</th>
+			<th>고충청구이력</th>
+		</tr>
+		<tr>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				
+			<tr/>
+		</tr>
+		<tr>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+			<td><input type="text"/></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+	<br />
+	<br />
+	<br />
+	<a href="index.html">돌아가기</a>
+
+</body>
+</html>

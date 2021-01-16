@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>중복체크</title>
+
+<script type="text/javascript">
+	
+	var ids=["khacademy","java","script"];
+	
+	function confirmChk(){
+		var id = document.getElementsByName("id")[0].value;
+		var div = document.getElementsByTagName("div")[0];
+		
+		if(ids.indexOf(id)!=-1){
+			div.innerHTML="<b>아이디가 존재합니다.</b>";
+		}else{
+			var userId="사용할 수 있는 아이디입니다."
+	 +"<input type='button' value='확인'" + "onclick='insertId(\""+id+"\")'>";      //""가 없으면 undefined 내가 넣은 값을 문자열로 바꿔준다. (\"")는 문자열을 나타낸다.
+			div.innerHTML=userId;          
+		}
+	}
+	
+	function insertId(id){
+		opener.document.getElementsByName("id")[0].value=id;
+	opener.document.getElementsByName("pwd")[0].focus();//커서 깜빡이는 아이
+		close();//
+	}
+</script>
+
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="id"/></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="중복확인" onclick="confirmChk()"/>
+				<input type="button" value="취소" onclick="self.close()"/>
+			</td>
+		</tr>
+	</table>
+	<div></div>
+
+</body>
+</html>

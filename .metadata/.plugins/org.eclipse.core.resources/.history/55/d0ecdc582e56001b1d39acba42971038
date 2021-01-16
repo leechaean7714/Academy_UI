@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style type="text/css">
+p {
+	border: 1px solid red;
+}
+
+#test01, #test02 {
+	width: 300px;
+	height: 300px;
+	border: 1px botted blue;
+}
+</style>
+
+<script type="text/javascript">
+	function addAppend() {
+		var fieldset = document.getElementById("addelement");
+		var p = document.createElement("p");
+
+		// var txt = document.createTextNode("자식태그들 중 마지막에 붙여넣는다.");
+		// p.appendChild(txt);
+		p.textContent = "자식 태그들 중 마지막에 추가한다."; // 위의 2줄을 한줄로 표현.
+
+		fieldset.appendChild(p);
+	}
+
+	function addBefore() {
+		var fieldset = document.getElementById("addelement");
+
+		var newP = document.createElement("p");
+		newP.textContent = "엘리먼트 앞에 붙여넣는다.";
+
+		var oldDiv = document.querySelector("fieldset > div");
+		fieldset.insertBefore(newP, oldDiv);
+
+	}
+
+	function moveElement() {
+		var moveElem = document.querySelector("fieldset").children[1];
+		 ;
+		 document.body.addElem.appendChild(moveElem);
+		// moveElem -> fieldset의 자식태그들 중 1번지에 있는 것을 담는다.
+		// addElem은 바디를 담아와서 바디의 자식들 뒤로 moveElem을 가져와 이동시켜 준다.
+		// moveElem에 담긴 객체가 복사되는 것이 아니라 이동되는 것을 명심.
+
+	}
+
+	function addTest() {
+		var div = document.createElement("div");
+		div.textContent = "dom test";
+		document.getElementById("test01").appendChild(div);
+
+		/*
+		var test1 = document.getElementById("test01");
+		var div = document.createElement("div");
+
+		div.textContent = "dom test";
+		test1.appendChild(div);
+		 */
+	}
+
+	function moveTest() {
+		var test01child = document.getElementById("test01").children[0];
+		console.log(test01child);
+
+		var test02 = document.getElementById("test02");
+		test02.appendChild(test01child);
+
+		/*
+		var moveEle = document.querySelector("div")[0].children[0];
+		var addEle = document.querySelector("div")[1];
+
+		addEle.appendChild(moveEle);
+		 */
+
+		/*
+		childNodes와 children의 차이점 알아오기
+		    childNodes는 element node외에도 주석노드 텍스트노드를 모두 가져오는 nodeList이고, 
+		    children은 element node만을 가져오는 HTMLCollection object이다  
+		 */
+	}
+</script>
+</head>
+<body>
+
+	<h1>태그 추가하기</h1>
+
+	<button onclick="addAppend();">appendChild()</button>
+	<button onclick="addBefore();">insertBefore()</button>
+	<button onclick="moveElement();">appendChild를 이용한 엘리먼트 이동</button>
+
+	<fieldset id="addelement">
+		<legend>부모태그</legend>
+
+		<div>div태그</div>
+	</fieldset>
+
+	<!-- 문제 -->
+
+	<h3>
+		문제1: text01태그에 "dom test"라는 내용을 가진 div태그를 추가해 보자.
+		<button onclick="addTest();">click!</button>
+	</h3>
+
+	<h3>
+		문제2: text01태그에 추가된 태그들을 test02로 이동시켜 보자.
+		<button onclick="moveTest();">click!</button>
+	</h3>
+
+	*test01
+	<div id="test01"></div>
+	*test02
+	<div id="test02"></div>
+
+
+
+</body>
+</html>

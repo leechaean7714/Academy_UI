@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>팝업창</title>
+
+<script type="text/javascript">
+	
+	function test(){
+		
+		var val=document.getElementsByName("test")[0].value;//중복이 있을수 있는니 배열로 표현getElements
+ 		
+		opener.document.getElementsByTagName("h1")[1].innerHTML=val;//입력받은 것이 h1의 팝업창 만들기  와  에 대입 된다.
+		close();
+	}
+</script>
+
+</head>
+<body>
+
+	<input type="text" name="test"/>
+	<input type="button" onclick="test()" value="전달"/>
+	<input type="button" onclick="self.close()" value="창닫기">
+
+
+</body>
+</html>

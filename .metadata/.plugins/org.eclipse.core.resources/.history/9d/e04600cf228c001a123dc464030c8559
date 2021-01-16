@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style type="text/css">
+    
+    #circle{
+        border: 1px solid red;
+        display: none;
+    }
+    
+    
+    
+</style>
+
+<script type="text/javascript">
+
+    function randomNum(){
+        var rnum = Math.floor(Math.random() * 81 + 10);
+        document.getElementById("rnum").value = rnum;
+    }
+
+    function randomBgColor(){
+        // style 색상 표현식 : rbg(256, 256, 256)
+
+        var rnum = function(){
+            return Math.floor(Math.random()*256);
+        }
+
+        document.body.style.backgroundColor="rgb("+rnum()+","+rnum()+","+rnum()+")";
+    }
+
+    function circleView(){
+        var rnum  = Math.floor(Math.random() * 200);
+
+        var circle = document.getElementById("circle");
+        circle.style.width = rnum + "px";
+        circle.style.height = rnum + "px";
+
+        console.log(circle);
+        circle.style.borderRadius = Math.floor(rnum/2) + "px";
+        circle.style.display="block";
+       // console.log(circle); 태그가 만들어짐.
+
+    }
+
+    function circleArea(){
+        var width = document.getElementById("circle").style.width;
+        console.log("width:"+width);
+
+        // 지름
+        var half = width.substring(0,width.length-2); //substring( start, end )
+        // var half = parseInt(width); -> 단위이기 때문에 알아서 단위를 나타내는 "px"를 빼고 숫자만 넘겨준다.
+       
+        console.log("1:"+typeof(half));
+
+        // 반지름
+        // var r = parseInt(half / 2);
+        var r = Math.floor(half/2);
+        console.log("2:"+typeof(r));
+
+        var area = document.getElementById("area").value = Math.PI * r * r;
+        // var area = Math.PI * Math.pow(r,2); -> 첫번째 숫자에 두번째 숫자를 제곱승
+        var len = document.getElementById("len").value = Math.PI * half;
+        // var len = Math.PI * half;
+
+        document.getElementById("area").innerHTML = "<b>" + area + "</b>";
+        // innerHTML = Math.round(area);
+        document.getElementById("len").innerHTML = "<b>" + len + "</b>";
+        //innerHTML = Math.round(len);
+
+        console.log("3:"+typeof(area));
+        console.log("4:"+typeof(len));
+    }
+
+
+</script>
+
+
+
+</head>
+<body>
+
+    <h1>랜덤 숫자 생성하기</h1>
+    숫자 :
+    <input type="text" id="rnum" readonly="readonly"/><br/>
+    <input type="button" value="숫자 생성" onclick="randomNum();" />
+
+
+    <h1>랜덤으로 배경색 설정하기</h1>
+    <input type="button" value="배경색" onclick="randomBgColor();" />
+
+
+    <h1>원 만들기</h1>
+    <input type="button" value="원 만들기" onclick="circleView();"/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id="circle"></div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+    <h1>원의 넓이, 둘레 구하기</h1>
+    <input type ="button" value = "원의 넓이/둘레" onclick="circleArea();"/><br>
+    원의 넓이 : <span id="area"></span><br>
+    원의 둘레 : <span id="len"></span><br>
+    <!--
+        넓이 구하는 공식 : PI * 반지름 * 반지름
+        둘레 구하는 공식 : PI * 지름 ( = 2 * 반지름)
+        document.getElementById("circle").style.width;
+    -->
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>@@@@@@@</title>
+</head>
+<body>
+
+<h1>image</h1>
+
+<img alt="사진이 안나올시 " src="image/image01.jpg" 
+width="200px" height="200px" title="마우스 오버">
+
+<h3>이미지에 링크걸기</h3>
+<a href="http://www.naver.com">
+	<img alt="" src="image/image01.jpg" width="100px" height="100px">
+</a>
+
+<h3>이미지 맵</h3>
+<img alt="" src="image/image01.jpg" width="100px" height="100px" usemap="#my">
+	<map name="my">
+		<area alt="" shape="rect" coords="25,25,75,75"
+		href="http://www.naver.com">
+	</map>
+
+</body>
+</html>

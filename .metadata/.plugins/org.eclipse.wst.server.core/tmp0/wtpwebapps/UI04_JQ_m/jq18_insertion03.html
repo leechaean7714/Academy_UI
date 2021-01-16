@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style type="text/css">
+    div{ border: 1px solid red;}
+</style>
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+    $(function(){
+        $("button:eq(0)").click(function(){
+            // target이 앞에
+            $("#base").after("<div>새로운 엘리먼트(after)</div>");
+        });
+        $("button:eq(1)").click(function(){4
+            // target이 뒤에
+            $("<div>새로운 엘리먼트(insertAfter)</div>").insertAfter("#base");
+        });
+        
+        $("button:eq(2)").click(function(){
+            $("#base").before("<div>새로운 엘리먼트(before)</div>");
+        });
+        $("button:eq(3)").click(function(){
+            $("<div>새로운 엘리먼트(insertBefore)</div>").insertBefore("#base");
+        });
+    })
+
+</script>
+</head>
+<body>
+
+    <button>after()</button>
+    <button>insertAfter()</button>
+    <button>before()</button>
+    <button>insertBefore()</button>
+    <div id="base"></div>
+    
+</body>
+</html>

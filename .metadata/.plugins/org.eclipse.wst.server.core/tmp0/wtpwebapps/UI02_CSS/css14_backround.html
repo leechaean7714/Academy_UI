@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+div,p{
+width: 200px;
+height: 200px;
+border: 1px solid red;
+}
+
+#bgsize{
+
+background: url("resources/image/img01.png");
+/* contain /inherit*/
+/* cover : 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소합니다. 
+가로 세로 비율을 유지합니다. */
+background-size: cover; 
+}
+
+#multibg{
+/* 투명도 */
+background-image: url("resources/image/img01.png"),url("resources/image/img02.png");
+background-size: contain;
+}
+
+#bgclip{
+
+border: 10px dotted black;
+padding: 50px;
+background-color: skyblue;
+/* 배경 이미지나 배경색을 그 박스 중 어디에 넣을 지 정하는 속성 */
+/* 테두리 영역과 그 안쪽 영역 */
+background-clip: border-box;   
+
+}
+
+#txtshadow{
+text-shadow: 1px 2px #ccc;
+
+
+}
+
+ #wrap{
+
+word-wrap:break-word;
+}  
+
+@font-face{
+font-family: "Goyang";
+src: url("resources/Goyang.ttf"),format("truetype");
+
+}
+
+#goyang{
+
+font-family: "Goyang";
+font-size: 30 px;
+
+}
+</style>
+
+
+
+</head>
+<body>
+
+<h1>background-size</h1>
+<div id="bgsize">background-size</div>
+
+<h1>multi-background</h1>
+<div id="multibg">multi-background</div>
+
+
+<h1>background-clip</h1>
+<div id="bgclip">background-clip</div>
+
+<h1>text-shadow</h1>
+<div id="txtshadow">text-shadow</div>
+
+<h1>word-wrap</h1>
+<div id="wrap">sksms wlsks xnduydlfdp wkrdms dkTlemfdmf qhdkTeksalkjfhsakjfhaslkjfhsa lkjfhlaskjfhlsakjhlaskjghalkjghlaksjghlakjsg.</div>
+
+<h1>font-face</h1>
+<div id="goyang">고양시 고양체 이쁘다</div>
+
+
+</body>
+</html>

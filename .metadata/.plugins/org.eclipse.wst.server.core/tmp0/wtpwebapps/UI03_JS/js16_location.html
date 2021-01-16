@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+<script type="text/javascript">
+
+ function locationTest() {
+	
+	// location.href="https://www.naver.con";
+	// location.assign("https://google.com");//location.href와 같다
+     //  location.replace("https://www.daum.net");//전단계이력 x  페이지 자체를 ?????????
+        location.reload();//클라이언트가 서버 한테 요청하고 있다 그럼 응답한다 리로드는 계속 요청하는 것 /리로드는 다시 응답받
+ } 
+
+</script>
+
+</head>
+<body>
+
+
+	<a href="https://www.google.com/search?q=kh%EC%A0%95%EB%B3%B4%EA%B5%90%EC%9C%A1%EC%9B%90&oq=kh&aqs=chrome.1.69i57j69i59j0l6.2073j0j8&sourceid=chrome&ie=UTF-8">페이지 이동</a>
+
+ 	<button onclick="locationTest();">페이지 이동</button>
+
+</body>
+</html>

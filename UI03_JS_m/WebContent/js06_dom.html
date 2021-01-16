@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function searchQS() {
+		// css 선택자
+		var doc = document.querySelectorAll("#test"); // 선택되는 모든 결과값을 가져오기 때문에 nodeList가 리턴된다.
+		console.log("1->", doc);
+
+		doc[0].innerHTML = "querySelectorAll(css 선택자)";
+
+		var doc2 = document.querySelector("#test");
+		doc2.style.color = "red";
+
+		/* queryselector vs querySelectorAll 
+		   특정 name, id, class 들을 이용해서 요소를 타겟으로 잡고 
+		   수정하거나 접근해서 정보를 가져온다.
+		 하지만 queryselector()는 타겟의 자식요소 한가지만 가져오고,
+		 querySelectorAll()은 모두 가져온다.
+		   
+		 */
+
+	}
+
+	function searchId() {
+		var doc = document.getElementById("test"); // Id는 유일한 하나의 값이기 때문에 node가 리턴된다.
+		doc.innerHTML = "id로 탐색합니다.";
+		doc.style.color = "blue";
+		console.log(doc);
+	}
+
+	function searchName() {
+		var doc = document.getElementsByName("test02"); // 이름이 같은 것들을 불러오기 때문에 nodeList가 리턴된다.
+		doc[1].value = "name 속성으로 엘리먼트 탐색!";
+		console.log("serchName:" + doc);
+
+	}
+
+	function searchTagName() {
+		var doc = document.getElementsByTagName("p");
+		console.log("searchTagName:" + doc);
+		doc[3].style.color = "green";
+		doc[3].innerHTML = "tagName으로 탐색!";
+	}
+</script>
+
+</head>
+<body>
+
+	<p onclick="searchQS();">DOM 탐색 메서드</p>
+
+	<p id="test" onclick="searchId();">1.엘리먼트의 id로 탐색 : 엘리먼트 하나를 선택 (중복
+		불가) -> 반환 : 값 하나</p>
+
+	<p onclick="searchName();">
+		2.엘리먼트의 name으로 탐색 : 엘리먼트 여러개를 선택 -> 반환 : 배열(nodeList)<br /> <input
+			type="text" name="test02" /><br /> <input type="text" name="test02" /><br />
+		<input type="text" name="test02" /><br />
+	</p>
+
+	<p onclick="searchTagName();">3.엘리먼트의 tag name으로 탐색 : 엘리먼트 여러개를 선택
+		-> 반환 : 배열(nodeList)</p>
+
+
+
+	<br />
+	<br />
+	<br />
+	<a href="index.html">돌아가기</a>
+
+</body>
+</html>

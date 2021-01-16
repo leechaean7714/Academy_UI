@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>윈도우 연습01</title>
+
+<style type="text/css">
+#regist {
+	border: 1px solid black;
+	background: pink;
+	position: absolute;
+	top: 200px;
+	left: 500px;
+   display: none;
+}
+
+
+
+/*
+		display : none; 		// 공간을 차지하지 않는다(만들어지지 않은 상태)
+		visibility : hidden;	// 공간을 차지한다(만들어져 있는 상태)
+	*/
+</style>
+
+<script type="text/javascript">
+	function openWin() {
+		var url = "js15_window02.html";
+		var title = "";
+		var prop = "top=500px,left=600px,width=500px,height=500px";
+		window.open(url, title, prop);
+	}
+
+	function registForm() {
+		document.getElementById("regist").style.display = "block";
+		document.body.style.background = "gray";
+
+		var btns = document.getElementsByName("btn");
+		for ( var i in btns) { //for in 문 (향상된 for문)
+			//	for(var i=0;i<btns.length;i++){
+			btns[i].disabled = "disabled";//btns[i].disabled 비활성화
+		}
+	}
+
+	function closeWin() {
+		document.getElementById("regist").style.display = "none";
+		document.body.style.background = "white";
+
+		var btns = document.getElementsByName("btn");
+		for ( var i in btns) {
+			btns[i].disabled = "";
+		}
+	}
+
+	function idchk() {
+		alert("중복체크를 확인하세요");
+	}
+
+	function idCheck() {
+		open("js15_window03.html", "", "width=300px,height=300px");
+	}
+</script>
+
+</head>
+<body>
+
+	<h1>window객체</h1>
+
+	<pre>
+	프로퍼티
+	 -document
+	 -history-브라우저의 세션 기록을 조작할 때 사용한다. ex)history.back();//뒤로 가기 버튼과 동일
+	 -location - 프로퍼티에 접근하면 읽기 전용인 locaion 오브젝트를 얻어올수 있다.
+	 -navigator
+	 -screen
+	 -frames
+	 -parent
+	 -top
+	 -self
+	메서드
+	 -alert()
+	 -confirm()
+	 -prompt()
+	 -back()
+	 -forward()
+	 -setInterval()
+	 -clearInterval()
+	 -setTimeout()
+	 -open()
+	 -close()
+	 -scroll(),scrollBy(), scrollTo() 
+	</pre>
+
+	<div id="f1">
+		<h1>팝업창 만들기</h1>
+		<button onclick="openWin()" name="btn">창열기</button>
+		<hr>
+		
+		
+		
+		<h1>회원가입하기(div팝업창)</h1>
+		<button onclick="registForm()" name="btn">회원가입</button>
+	</div>
+
+	<!-- 회원가입폼 시작 -->
+	<div id="regist">
+		<form>
+			<table border="1">
+				<caption>회원가입</caption>
+				<!-- 테이블 라벨 -->
+				<tr>
+					<td>아이디</td>
+					<td>
+					    <input type="text" name="id" onclick="idchk()"readonly="readonly" /> 
+					    <input type="button" value="중복체크" onclick="idCheck()" />
+					</td>
+				</tr>
+				<tr>
+					<td>패스워드</td>
+					<td>
+					    <input type="password" name="pwd" alt="" style="color: red;" checked="checked" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+					    <input type="button" value="확인" onclick="closeWin()" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 회원가입폼 종료 -->
+
+	<br />
+	<br />
+	<br />
+	<!-- iframe 요소를 이용하면 해당 웹 페이지 안에 어떠한 제한 없이 또 다른 하나의 웹 페이지를 삽입할 수 있습니다. -->
+	<iframe name="myframe" src="js05_rolling.html" style="width: 70%; height: 500px"></iframe>
+
+</body>
+</html>

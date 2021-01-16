@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<style type="text/css">
+div {
+	width: 400px;
+	height: 200px;
+	border: 2px solid red;
+	padding: 20px;
+	overflow: auto;
+}
+
+div p:first-child {
+	float: left;
+	border: 1px solid blue;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+}
+
+div p:last-child {
+	float: right;
+	border: 1px solid blue;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+	/*
+	 이벤트 전파 : 각 요소가 서로 포함관계(중첩)일 경우 요소 중 하나에 이벤트가 발생하면 중첩된 요소들도 이벤트가 전파된다.
+	 이벤트 전파 막기 : 
+	 - stopPropagation() : 이벤트 요소의 전파 막기
+	 - preventDefault() : 이벤트에 의한 기본 동작 막기
+	 - return false : 위의 기능 둘 다 적용
+	 */
+
+	// $(function(){});는 window.onload와 같은 기능을 하는데 이 둘은 윈도우가 맨 처음 생성될 때 이벤트를 생성하기 때문에 이후에 생기는 태그들에 대해서는 이벤트가 발생되지 않는다.
+	$(function() {
+		$("a:eq(0)").click(function(e) {
+			
+			alert("a클릭!");
+			// e.stopPropagation();
+			// e.preventDefault();
+			 return false;
+		});
+		$("p").click(function(e) {
+			alert("p클릭!");
+			//e.stopPropagation();
+		});
+		$("div").click(function() {
+			alert("div클릭!");
+		})
+
+		 $("a:eq(1)").bind("mouseover mouseout", function(e) {
+			if (e.type == "mouseover") {
+				$(this).css("background-color", "yellow");
+			}
+			if (e.type == "mouseout") {
+				$(this).css("background-color", "");
+			}
+		}); 
+
+		/*  $("a:eq(1)").bind({
+			"mouseover" : function() {
+				$(this).css("background-color", "blue");
+			},
+			"mouseout" : function() {
+				$(this).css("background-color", "");
+			}
+		});  */
+
+		$("span").click(function() {
+			alert("span을 클릭하면 이벤트가 해제됩니다!!");
+			$("a:eq(1)").unbind();
+		});
+
+		$("button").click(function() {
+			$("body").append("<p>새로 추가된 p태그</p>")
+		});
+
+		$("body").on("click", ">p", function(e) {
+			alert("새로 추가된 요소도 이벤트 적용!!"+e.data.data01+e.data.data02);
+		})
+         
+		/* $("body").on("click", ">p",{data01:'1111',data02:'2222'}, function(e) {
+			alert("새로 추가된 요소도 이벤트 적용!!"+e.data.data01+e.data.data02);
+		}) */
+		
+		
+		/*bind는  구식이고on은 신식 정도의 차이??
+		그럼 on()메서드에 대해 좀더 자세히 알아볼까요?
+				※.on(events,selector,data,function()); 이런 형식으로 되어있습니다.
+				       1      2        3      4
+				빨간색 처리되어있는 부분은 있어도그만 없어도 그만인 부분입니다.
+				즉 필요하면쓰고 필요없으면 안써도 그만입니다. ㅎㅎ
+				1 = 이벤트들을 나열하면 된답니다. 하나이상의 이벤트를 나열하고싶을 때는
+				공백으로 구문하면됩니다.
+				예)'click mouseover'
+				2 = 자손 요소들을 필터링 할때 사용합니다.
+				예)':not(#aa)'
+				3 = 이벤트가 발생했을때 전달하고 싶은 데이터값
+				예) '{변수명 : 값}' 
+				4 = 특정 이벤트가 발생했을때 실행될 함수를 지정하며 괄호안에는
+				이벤트 객체가 매개변수로 전달되므로 이름을 지정해줘야한다.
+				예) 'function(이름 아무거나)'  */
+
+				
+	});
+</script>
+</head>
+<body>
+
+	<span>unbind() : 이벤트 해제</span>
+	<div>
+		<p>
+			<a href="https://www.naver.com">클릭!</a>
+		</p>
+		<p>클릭!</p>
+	</div>
+
+	<div>
+		<p>
+			<a href="https://www.google.com">클릭!</a>
+		</p>
+		<p>클릭!</p>
+	</div>
+	<button>요소 추가</button>
+
+</body>
+</html>

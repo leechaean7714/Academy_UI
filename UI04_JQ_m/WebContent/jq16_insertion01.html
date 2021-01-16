@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style type="text/css">
+
+    div{
+        border: 1px solid green;
+    }
+    .prepend{
+        border: 1px dotted red;
+    }
+    .append{
+        border: 1px dotted blue;
+    }
+
+</style>
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        $("button:eq(0)").click(function(){
+            $("div").prepend($("<p>").addClass("prepend").text("prepend"));
+        });
+        // $().prepend : 앞에 추가
+        
+        $("button:eq(1)").click(function(){
+            $("div").append($("<p>").addClass("append").text("append"));
+        });
+        // $().append : 뒤에 추가
+
+        $("button:eq(2)").click(function(){
+            $("div").html("<b>html 요소를 변경</b>");
+        });
+        $("button:eq(3)").click(function(){
+            $("div").text("<b>text 요소를 변경</b>");
+        })
+            
+    });
+
+</script>
+</head>
+<body>
+
+    <button>prepend</button>
+    <button>append</button>
+    <button>html</button>
+    <button>text</button>
+
+    <div>
+        <p>내부 삽입 1</p>
+        <p>내부 삽입 2</p>
+    </div>
+
+    <hr/>
+
+    <div id="test"></div>
+
+    
+    <script type="text/javascript">
+        $(function(){
+            $("#test").html("<input type='button' value='test' />");
+        });
+
+
+    </script>
+
+    
+</body>
+</html>

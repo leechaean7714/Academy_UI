@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<script type="text/javascript">
+	onload = function() {
+		document.getElementsByTagName("button")[0].onclick = testDate01;
+		document.getElementsByTagName("button")[1].onclick = testDate02;
+		document.getElementsByTagName("button")[2].onclick = testDate03;
+		document.getElementsByTagName("button")[3].onclick = testDate04;
+		document.getElementsByTagName("button")[4].onclick = testDate05;
+	}
+
+	function testDate01() {
+		var inputDate = document.getElementById("today");
+		console.log(inputDate);
+		var date = new Date(); // 날짜 객체 생성
+
+		inputDate.innerHTML = date.toDateString() + "<br/>";
+		inputDate.innerHTML += date.toLocaleDateString() + "<br/>";
+		inputDate.innerHTML += date.toLocaleString() + "<br/>";
+		inputDate.innerHTML += date.toLocaleTimeString() + "<br/>";
+	}
+
+	function testDate02() {
+		// 2019/12/20/금요일 으로 출력하기.
+		var now = new Date();
+		
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;//month는 0이 일월을 의미하므로 +1을 해줘야 한다.
+		var day = now.getDate();
+		var dayOfWeek = now.getDay();
+		var dayArr = [ "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" ];
+
+		document.getElementById("today").innerHTML = year + "/" + month + "/"
+				+ day + "/" + dayArr[dayOfWeek];
+	}
+
+	function testDate03() {
+		var year = 2019;
+		var month = 10;
+		var day = 30;
+		var date = new Date(year, month - 1, day);
+
+		document.getElementById("specific").innerHTML = date;
+	}
+
+	function testDate04() {
+		var dates = document.getElementById("dates").value;
+		//console.log(dates + " : " + typeof(dates));
+		var inputDate = document.getElementById("inputDate").value;
+		//console.log(inputDate + " : " + typeof(inputDate));
+
+		var date = new Date(dates);
+		date.setDate(date.getDate() + parseInt(inputDate));
+		document.getElementById("result").value = date.toLocaleDateString();
+	}
+
+	function testDate05() {
+		/*
+		var dates = document.getElementById("dates02").getTime;
+		var inputDate = document.getElementById("inputDate02").getTime;
+
+		var date = new Date();
+		date.setDate(dates.getDate() + inputDate.getDate());
+		document.getElementById("result02").value = date.toLocalDateString();
+		 */
+
+		var dates02 = document.getElementById("dates02").value;
+		var inputDate02 = document.getElementById("inputDate02").value;
+
+		var now = new Date(dates02);
+		var after = new Date(inputDate02);
+
+		var result = (after.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
+
+		document.getElementById("result02").value = result;
+
+	}
+</script>
+
+
+
+</head>
+<body>
+
+	<h1>오늘 날짜 출력하기</h1>
+	<span id="today"></span>
+	<br>
+	<button>오늘날짜</button>
+	<button>오늘날짜(표현)</button>
+
+	<hr />
+
+	<h1>특저 날짜 출력하기</h1>
+	<span id="specific"></span>
+	<br />
+	<button>특정 날짜</button>
+
+	<hr />
+
+	<h1>경과 날짜 구하기</h1>
+	<label>지정날짜</label>
+	<input type="date" id="dates" size="50" />
+	<br>
+	<label>경과일</label>
+	<input type="number" id="inputDate" />
+	<br>
+	<label>경과 후 날짜</label>
+	<input type="text" id="result" readonly="readonly" />
+	<button>경과날짜</button>
+
+
+	<hr />
+
+
+	<h1>D-day 기능 만들기</h1>
+	<label>시작 날짜</label>
+	<input type="date" id="dates02" size="50" />
+	<br>
+	<label>종료 날짜</label>
+	<input type="date" id="inputDate02" />
+	<br>
+	<label>남은 일수</label>
+	<input type="text" id="result02" readonly="readonly" />
+	<button>남은 일 수 구하기</button>
+	<!-- getTime() : milleseconds 반환 -->
+
+</body>
+</html>

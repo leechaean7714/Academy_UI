@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+	function c1() {
+		var doc = $("input:text").val();
+		// "input:text" input의 type이 text인 태그를 말한다.
+		/*
+		    JS : value();
+		    JQ : val();
+		 */
+		alert(doc);
+	}
+
+	function c2() {
+		var doc = $("input:radio").val();
+		$("#a").text(doc);
+		/*  JS : innerHTML();
+		    JQ : html();       */
+	}
+	
+	function c3() {
+		// checkbox의 value 를 가지고 와서 id 가 a인 요소의 html에 넣어주자.
+		var doc = $("input:checkbox").val();
+	//	$("#a").html(doc);
+		$("#a").text($("input:checkbox").val());
+	}
+
+	/*
+	$(function(){   // jQuery로 바꿔보기.
+	    var selElement = document.getElementsByTagName("select")[0];
+	    selElement.onchange=function(){
+	        alert(selElement.options[selElement.selectedIndex].value);
+	    }
+	});
+	 */
+
+	$(function() {
+				$("select")[0].onchange = function() {
+					/* onchange는 input이나 select 등의 데이터가 변경될 때 호출되는 이벤트이다. */
+					alert($("select")[0].options[$("select")[0].selectedIndex].value);
+					console.log("select:"+ $("select")[0].options[$("select")[0].selectedIndex].value);
+					// jQuery를 사용해서 불러온 값이 HTMLobject이기 때문에 val이 아니라 value를 사용해서 값을 불러와야 한다.
+					var what = $("select")[0].options[$("select")[0].selectedIndex].value;
+					console.log("what:" + typeof what);}
+			})
+</script>
+</head>
+<body>
+
+	<form action="">
+		<input type="text" /> <input type="button" value="선택" onclick="c1();" /><br>
+
+		<input type="radio" value="19/10/30~" onclick="c2();" />19/10/30~ <br>
+		<input type="checkbox" value="빅데이터" onclick="c3();" />빅데이터 UI
+		<div id="a"></div>
+		<select>
+			<option value="1">one</option>
+			<option value="2">two</option>
+			<option value="3">three</option>
+		</select>
+	</form>
+
+</body>
+</html>

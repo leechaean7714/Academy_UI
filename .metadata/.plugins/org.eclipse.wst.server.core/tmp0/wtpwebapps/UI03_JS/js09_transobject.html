@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>transobject</title>
+</head>
+
+<body>
+
+ <h1>1.숫자 형 변환 number</h1>
+ <p>문자형의 숫자를 숫자형으로 변환시켜 준다.</p>
+ <input type="text" id="num"/> 
+ <button onclick="numTest(num.value);">확인</button>
+ 
+<script type="text/javascript">
+
+function numTest(val) {
+	
+	var vals = Number(val)+5;//string,으로 넘어온다
+	alert(vals+ " : "+ typeof(vals));
+	}
+
+
+</script>
+
+
+
+
+<h2>2. 정수형 형 변환 parseInt()함수</h2>
+<p>문자형의 숫자를 정수형으로 반환</p>
+<input type="text" id="int"/>
+<button onclick="intTest(int.value)">확인</button>
+
+
+<script type="text/javascript">
+
+function intTest(val) {
+	var vals = parseInt(val)+5;
+	alert(vals+" : " + typeof(vals));
+	
+}
+
+</script>
+
+<h2>3.실수형 형 변환 parseFloat() 함수</h2>
+<p>문자형의 숫자를 실수형으로 반환</p>
+<input type="text" id="float">
+
+<button onclick="floatTest(float.value)">확인</button>
+
+<script type="text/javascript">
+
+function floatTest(val) {
+	var vals = parseFloat(val)+5;
+	alert(vals+":"+typeof(vals));
+	
+}
+</script>
+
+<h2>4.검증 함수</h2>
+<p>문자열로 된 코드를 자바스크립트로 읽어들여 계산한ㄷㅏ.</p>
+
+<input type="text" name="evalue" placeholder="예)5+10">
+<button onclick="evalTest();">계산</button>
+<span></span>
+
+<script type="text/javascript">
+
+function evalTest() {
+	var val = document.getElementsByName("evalue")[0];
+	
+	if (confirm("작성하신 코드가 맞나요?: " +val.value)) {
+		document.getElementsByTagName("span")[0].innerHTML=
+			"<b>계산결과 : " + eval(val.value)+"</b>";
+			
+			}else{
+		
+		
+		val.placeholder="다시 작성 합니다. 예) 5+10";
+		
+	}
+}
+
+
+
+
+
+
+
+</script>
+
+<hr/>
+
+<h1>숙제</h1>  <!--   클래스를 아이디를 쓰던 쓸수있다  -->
+
+<input type="number" name="test"/>
+
+<input type="text" list = "mylist" name ="test">
+
+<datalist id ="mylist">
+
+<option value="+">
+<option value="-">
+<option value="*">
+<option value="/">
+
+</datalist>
+
+<input type="number" name ="test">
+<button onclick="calc();">계산</button>
+
+<span></span>
+
+<script type="text/javascript"> 
+
+function calc(){//id로 name으로
+	
+	var input01 =document.getElementsByName("test")[0];// document.getElementsByName("test")[0] :0번지 노드리스트로 가져온다.
+	var opr01= document.getElementsByName("test")[1];
+	var input02 = document.getElementsByName("test")[2];
+	
+	var res = eval(input01.value + opr01.value + input02.value);
+	
+	
+	
+	document.getElementsByTagName("span")[1].innerHTML=res;
+	
+	
+}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onlyTest01.html</title>
+<script type="text/javascript">
+	function plus() {
+
+		var str01 = "String";
+		var str02 = "Test";
+		
+		var str03 = str01+str02;
+		alert(str03);
+		
+		var str04 = str01.concat(str02,);
+		
+	}
+	
+	function strTest02(){
+		
+		var num = 12.5;
+		var bool = true;
+		var result = "string--"  +  num  +  bool;
+		alert(result +":"+typeof(result));
+	}
+	
+	function strTest03(){
+		var span = document.getElementById("compare");
+		var str = prompt("이름을 입력해 주세요.!!!!");
+		
+		if(str=="kh"){
+			span.textContent = str+" , welcome!!"
+		} else if(str == "kh정보 교육원 "){
+			span.textContent = str+" , welcome!!";
+		}else{
+			span.textContent = "check name!!"
+		}
+		
+		 var num = 10;
+		if(num=="10"){
+			alert("== 연산자 사용. 숫자 10이 맞습니다.");
+		}else{
+			alert("== 연산자 사용. 숫자 10이 아닙니다.");
+		}
+		
+		if(num===10){
+			alert("=== 연산자 사용: 숫자 10이 맞습니다.");
+		}else{
+			alert("=== 연산자 사용: 숫자 10이 아닙니다.");
+		}
+		
+		var strObj = new String("kh");
+		var strLiteral = "kh";
+		
+		if(strObj == strLiteral){
+			alert("문자가 같다");
+		}else{
+			alert("문자가 다르다.");
+		}
+	
+		
+		if(strObj === strLiteral){
+			alert("문자가 같다."+ typeof(strObj)+" , "+typeof(strLiteral));
+		}else{
+			alert("문자가 다르다."+typeof(strObj)+" ,"+typeof(strLiteral));
+		}
+		 
+		
+		
+		}
+	
+	function strTest04(){
+		
+		var str = "홍길도 이순신 김선달 유재석 강호동 홍길동";
+		var prop = prompt("검색할 이름 입력");
+		
+		alert(str.indexOf(prop));
+	}
+	
+	function strTest05(){
+		var str="문자열 추출하기. 관련 메소드:indexof,substring.";
+		var startIndex = str.indexOf(":");
+		var endIndex = str.lastIndexOf(".");
+		var res = str.substring(startIndex+1,endIndex);
+		alert(res);
+		
+	}
+</script>
+</head>
+<body>
+
+	<p>
+		문자열 합치기
+		<button onclick="plus();">click</button>
+	</p>
+	<p>
+		다른 자료형 합치기
+		<button onclick="strTest02();">click</button>
+	</p>
+	<p>
+		문자열 비교하기
+		<button onclick="strTest03();">click</button>
+		<span id="compare"></span>
+	</p>
+
+	<p>
+		문자열 검색하기
+		<button onclick="strTest04();">click</button>
+	</p>
+	<p>
+		문자열 추축하기
+		<button onclick="strTest05();">click</button>
+	</p>
+	<p>
+		키워드 나누기
+		<button onclick="">click</button>
+	</p>
+	<div id="substring"></div>
+
+
+</body>
+</html>

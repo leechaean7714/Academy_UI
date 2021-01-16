@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        // form에서 submit 이벤트가 발생하면 실행!
+        $("#signal").submit(function(){
+            if($(".infobox").val()==null || $(".infobox").val()==""){
+                $(".error").show();
+                return false;   // 이벤트 전파 막기
+            }
+
+        });
+        
+        
+       
+      
+        
+    $("#confirm").click(function(){
+        $("#result").empty();
+
+        if($("input[name=chk]:checked").length == 0){
+            alert("하나 이상 체크해 주세요!");
+        } else {
+        	/* 
+        	<input type="checkbox" name="all" onclick="allChk(this.checked);"/>전체선택<br/>
+        	<input type="checkbox" name="chk" value="20000"/><b>java</b><br/> */
+            var res = 0;
+            $("input[name=chk]:checked").each(function(i){// .each는 조건에 만족하는 태그들의 속성을 배열에 담아서 가져온다.
+                // var chk = $("input[name=chk]:checked").eq(i);
+                var chk = $(this);  // this는 위의 .each 전에 있는 "input[name=chk]:checked"를 가져온다
+                var book = chk.next().text(); // .next()는 해당 태그의 바로 다음 태그를 가져옴.
+                var price = chk.val();
+                $("#result").append(book + " : 가격 " + price + "<br/>");//.append:선택한 내용의 요소의 끝에 콘텐츠를 추가합니다.
+                res += parseInt(price);
+                
+            });
+            $("#result").append("총 가격 : " + res);
+        }
+
+        
+       /*  $("input[name=chk]").click(function(){
+            if($("input[name=chk]").length == $("input[name=chk]:checked").length){//다 체크가 되어있으면,
+                $("input[name=all]".prop("checked", true));
+            } else {
+                $("input[name=all]".prop("checked", false));
+            }
+        });
+         */
+        
+        
+        
+        
+        
+        
+    });
+
+    });
+
+    
+    
+    function allChk(bool){
+        $("input[name=chk]").each(function(){
+          $(this).prop("checked",bool); 
+           
+          
+            // .each 자체가 값을 다 가져와 저장해주기 때문에 따로 function(i)나 .eq(i)를 해주지 않아도 받아오는 값 모두를 사용해준다.
+        });
+    }
+
+    /*
+        attr("attrName") / prop("attrName")
+        .attr() : HTML의 속성("attribute")을 취급 (HTML안에 있는 태그 문서의 속성)
+        .prop() : JavaScript 객체의 속성("property")을 취급 (HTML 문서를 받아와 Object로 만든 객체의 속성) - 권장됨.
+        
+        .attr()을 통해서 element가 가지는 속성값이나 정보를 조회(style, src, rowspan등) 하거나 세팅하는 형식의 업무를 하고,
+        .prop()을 통해서는 element가 가지는 실제적인 상태(활성화, 체크, 선택여부 등)을 제어하는 업무를 하는 것이 좋겠다.
+    */
+
+
+    /*
+    function allChk(check){
+        var chks = $("input[name=chk]");
+        console.log($("input[name=chk]"));
+        for(var i = 0; i < chks.length; i++){
+            chks[i].checked = check;
+        }
+    }
+    */
+
+    
+
+</script>
+</head>
+<body>
+
+    <form action ="" id="signal" method="get">
+        <div>
+            <span class="label">User ID</span>
+            <input type="text" class="infobox" name="userid"/>
+            <span class="error" hidden="" style="color:red;">반드시 입력하세요.</span>
+        </div>
+        <input type="submit" class="submit" value="입력"/>
+    </form>
+
+    <hr/>
+
+    <fieldset style="width: 300px">
+        <legend>체크 여부 확인</legend>
+
+        <input type="checkbox" name="all" onclick="allChk(this.checked);"/>전체선택<br/>
+
+        <input type="checkbox" name="chk" value="20000"/><b>java</b><br/>
+        <input type="checkbox" name="chk" value="30000"/><b>jquery</b><br/>
+        <input type="checkbox" name="chk" value="40000"/><b>spring</b><br/>
+
+        <input type="button" value="확인" id="confirm"/><br/>
+        <span>선택한 책 가격</span>
+        <div id="result"></div>
+        <!-- 체크된 항목이 없으면 "하나 이상 체크해주세요" 라는 alert창 띄우기 -->
+    </fieldset>
+    
+</body>
+</html>

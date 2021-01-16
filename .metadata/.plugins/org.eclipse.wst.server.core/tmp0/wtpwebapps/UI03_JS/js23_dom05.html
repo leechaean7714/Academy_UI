@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+p{border: 1px solid red;}
+#test01,#test02{width: 300px; height: 300px; border: 1px dotted blue;}
+
+</style>
+
+<script type="text/javascript">
+
+function addAppend() {
+	var fieldset = document.getElementById("addelement");
+	var p = document.createElement("p");
+	
+	//var txt = document.createTextNode("자식태그들 중 마지막에 붙여놓는다.");
+	//p.appendChild(txt);
+	p.textContent = "자식태그들 중 마지막에 추가한다.";
+	
+	fieldset.appendChild(p);//부모의 가장 마지막 자식요소에 들어감
+	
+}
+
+function addBefore() {
+	
+	var fieldset = document.getElementById("addelement");
+	
+	
+	var newP = document.createElement("p");
+	newP.textContent = "엘리먼트 앞에 붙여넣는다.";
+	
+	var oldDiv = document.querySelector("fieldset>div");
+	fieldset.insertBefore(newP,oldDiv);//inset특정태그 앞아ㅔ
+	
+}
+
+function moveElement() {
+	
+	var moveElem=document.querySelector("fieldset").children[1];
+	var addElem=document.body;
+	addElem.appendChild(moveElem);
+	
+}
+
+function addTest() {
+	var div = document.createElement("div");
+	div.textContent="dom test";
+	document.getElementById("test01").appendChild(div);
+	
+}
+
+function moveTest() {
+	
+	var test01child=document.getElementById("test01").children[0];//?????????
+	var test02 = document.getElementById("test02");
+	test02.appendChild(test01child);
+	
+}
+
+/* 검사하지 않는 숙제
+childNodes와 children의 차이점 */
+
+</script>
+</head>
+<body>
+
+    <h1>태그 추가하기</h1>
+
+			<button onclick="addAppend();">appendChild()</button>
+			<button onclick="addBefore();">insertBefore()</button>
+			<button onclick="moveElement();">appendChild를 이용한 엘리먼트 이동</button>
+
+        <fieldset id = "addelement">
+	
+	        <legend>부모태그</legend>
+	
+	        <div>div태그</div>
+        </fieldset>
+<!-- 문제 -->
+
+<h3>
+문제1.test01 태그에 "dom test"라는 내용을 가진 div태그를 추가해 보자.
+<button onclick="addTest();">click</button>
+</h3>
+
+<h3>
+문제2:test01태그에 추가된 태그들을 test02로 이동시켜 보자.
+<button onclick="moveTest();">click</button>
+
+*test01
+<div id="test01"></div>
+*test02
+<div id ="test02"></div>
+
+</h3>
+
+</body>
+</html>

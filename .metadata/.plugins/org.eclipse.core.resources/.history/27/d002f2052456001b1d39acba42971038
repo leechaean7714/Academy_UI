@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<script type="text/javascript">
+	function searchPar() {
+		
+		var child = document.getElementsByTagName("p")[0];
+		console.log("child->", child);
+		var parent = child.parentNode;
+		console.log("p->", parent);
+		alert(parent.nodeName);
+		parent.style.backgroundColor = "pink";
+	}
+
+	function searchChi() {
+		var div = document.getElementsByTagName("div")[1];
+		var divChild = div.childNodes;
+		console.log("2->", divChild);
+		alert(divChild.tagName);
+
+		/* console.log("divChildren[0]->", divChildren[0]); */
+		div.style.backgroundColor = "skyblue";
+
+	}
+
+	function PNBG() {
+		var child04 = document.getElementsByTagName("p")[3];
+		console.log(child04);
+		var parent = child04.parentNode;
+
+		parent.style.backgroundColor = "red";
+	}
+
+	function CNFS() {
+		var div = document.getElementsByTagName("div")[2];
+		var child = div.childNodes[3];
+		child.style.fontSize = "20pt";
+		/*
+		var divs = document.getElementsByTagName("div");
+		var lastDiv = "";
+		var lastP = "";
+		    for(var i = 0; i < divs.length; i++){
+		    lastDiv = document.getElementsByTagName("div")[i];
+		    }
+		    var ps = document.getElementsByTagName(lastDiv);
+		    for(var i = 0; i < ps.length; i++){
+		        lastP = document.getElementsByTagName("p")[i];
+		    }
+		    lastP.fontsize = "20pt";
+		 */
+	}
+</script>
+
+</head>
+<body>
+
+	<h1>부모탐색, 자식탐색</h1>
+
+	<div>
+		야야야야
+		<p>child01</p>
+		0000
+		<p>child02</p>
+		1111
+		<p>child03</p>
+		2222
+	</div>
+
+	<button onclick="searchPar();">부모탐색</button>
+	<br />
+	<button onclick="searchChi();">자식탐색</button>
+
+	<!-- 문제!! -->
+	<div style="background-color:">
+		<p>test01</p>
+		<p>test02</p>
+	</div>
+	<div>
+		<p>test03</p>
+		<p>test04</p>
+	</div>
+
+	<h3 onclick="PNBG();">1. "test01 태그를 포함한 부모태그" 의 배경색을 적용하자.</h3>
+	<!-- parentNode -->
+	<h3 onclick="CNFS();">2. "마지막 div 태그" 에 포함된 마지막 p태그의 폰트 크기를 20pt
+		적용하자.</h3>
+	<!-- childNodes -->
+
+</body>
+</html>

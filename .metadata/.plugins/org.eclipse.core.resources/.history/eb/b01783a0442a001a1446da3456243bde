@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>@@@@@@@@@@@@</title>
+</head>
+<body>
+
+<form>
+	<fieldset>
+		<legend>여러 줄 글상자와 목록 상자</legend>
+		<label for="reply">답글</label><br/>
+			<textarea rows="3" cols="10" id="reply" name="re"></textarea>
+	    <p>과목선택
+	    	<select name="selected01">
+	    		<option value="">html</option>
+	    		<option value="">css</option>
+	    		<option value="">jq</option>
+	    	</select>	
+	    </p>
+	    <p>저녁선택
+	    	<select name="seleted">
+	    		<optgroup label="양식">
+	    			<option value="">치킨</option>
+	    			<option value="">피자</option>
+	    			<option value="">스테이크</option>
+	    			
+	    		</optgroup>
+	    		<optgroup label="중식">
+	    			<option value="">짜장면</option>
+	    			<option value="">짬뽕</option>
+	    		</optgroup>
+	    	</select>
+	    </p>
+	    <input type="submit" value="전송">
+	</fieldset>
+</form>
+</body>
+</html>

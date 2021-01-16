@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style type="text/css">
+img {
+	vertical-align: middle;
+	width: 300px;
+	height: 300px;
+}
+
+a {
+	font-size: 40pt;
+	text-decoration: none;
+}
+</style>
+
+<script type="text/javascript">
+	window.onload = function() {
+		var anchs = document.querySelectorAll("a");
+		var img = document.querySelector("img");
+		var count = 1;
+		console.log("counr->", count);
+		anchs[0].onclick = function() {
+			var imgAlt = img.getAttribute("alt");
+			if (imgAlt == "img01") {
+				count = 4;
+				img.setAttribute("alt", "img04");
+				img.setAttribute("src", "image/img04.png");
+
+			} else {
+				count--;
+				console.log("count--:" + count);
+				img.setAttribute("alt", "img0" + count);
+				img.setAttribute("src", "image/img0" + count + ".png");
+
+			}
+		}
+
+		anchs[1].onclick = function() {
+			count++;
+			console.log("0->", count);
+			if (count > 4) {
+				console.log("count:" + count);
+				count = 1;
+			}
+			img.setAttribute("alt", "img0" + count);
+			img.setAttribute("src", "image/img0" + count + ".png");
+			console.log(img);
+			/*
+			var imgAlt = img.getAttribute("alt");
+			if(imgAlt == "img04"){
+			    count = 1;
+			    img.setAttribute("alt","img01");
+			    img.setAttribute("src","image/img01.png");
+			} else {
+			    count++;
+			    img.setAttribute("alt","img0"+count);
+			    img.setAttribute("src","image/img0"+count+".png");
+			}
+			 */
+		}
+
+	}
+</script>
+</head>
+<body>
+
+	<div>
+		<a href="#" id="lt">◀</a> <img alt="img01" src="image/img01.png">
+		<a href="#" id="rt">▶</a>
+	</div>
+
+</body>
+</html>

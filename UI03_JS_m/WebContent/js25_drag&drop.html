@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 280px;
+	margin: 10px;
+	padding: 10px;
+	border: solid 15px blue;
+	float: left;
+}
+</style>
+
+</head>
+<body>
+<!-- draggable:web page 내의 모든 요소가 드래그 될 수 있는 객체로 변환될 수 있따. -->
+<!-- ondragstart:드래그 될 수 있는 객체로 만든 후 dataTransfer 객체의 setData() 호출. 
+                 setData()메소드는 드래그되는 대상 객체의 데이터(data)와 타입 (data type)을 설정합니다.-->
+
+<!-- ondragover:드래그 되는 객체가 어디에 놓일 수 있는지 설정.
+                기본적으로 html요소는 다른 요소의 위에 위치 할 수 없으나, 위치할 수 있게 만들수 있게 만드므로 
+                도착지 요소의 기본 동작을 막아야 한다. 이것을 event.preventDefault() 로 할 수 있따. -->
+<!-- ondrop: 드래그하던 객체를 놓으면 drop 이벤트가 발생한다. 
+              ondrop 속성을 이용하여 drop이벤트에 대한 동작을 설정할 수 있습니다. -->
+	<h1>드래그 앤 드롭을 이용한 객체의 이동</h1>
+
+	<p>그림을 드래그해서 옆의 사각형으로 옮겨보세요!</p>
+
+	<div ondrop="drop(event)" ondragover="dragEnter(event)">
+		
+		<img id="nike" width="180" height="280"
+			src="image/image01/img02.png" draggable="true"
+			ondragstart="drag(event)">
+	</div>
+	<div ondrop="drop(event)" ondragover="dragEnter(event)"></div>
+	
+	<script>
+		function dragEnter(ev) {
+			//console.log(ev);
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);//setData(key,value)
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+h1{
+	background-color: pink;
+}
+
+#a{
+	color: red;
+}
+
+.b{
+	color: blue;
+}
+
+*{
+	padding: 2px;
+}
+
+p > strong{
+	color: orange;
+}
+
+p#c + p{
+	color: green;
+}
+/* p#c에서 p는 생략 가능  -> id(#)은 유일한 하나에 사용하기 때문에 구분 지어줄 필요가 없다. */
+
+p[title]{
+	font-size: 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function myClassQ(){
+		this.name = "kh정보교육원";	// 외부 접근 가능
+		var name02 = "Q 강의실";	// 외부 접근 불가능
+		this.getName02 = function(){	
+	    // 외부 접근 불가능한 var를 자식 객체에서 this메소드로 리턴해줌으로써 접근 가능하게 도와준다.
+			return name02;
+		}
+	}
+	
+	var classQ = { // 리터럴 객체, 객체 리터럴이라 한다. 키:값 형식으로 사용 가능.
+			name:"kh 정보 교육원",
+			print:function(){
+				return classQ.name+"!!!!";
+			}
+	}
+	
+	myClassQ.prototype.printName = function(){ 
+		// 클래스이름.prototype.메소드이름 
+		// -> 왼쪽의 클래스에 오른쪽의 이름을 가진 메소드를 새로 만드는데 그 기능을 { } 바디 안에 만들어준다.
+		// -> 객체에 기능을 추가 시켜준다 ->  prototype을 기준으로 왼쪽의 객체에 오른쪽의 기능을 추가한다.
+		alert(this.name + ", " + this.getName02() + " 화이팅! ");
+	}
+	
+	
+	function objTest(){
+		var cls = new myClassQ();
+		console.log("===============");
+		console.log(cls.name);
+		console.log(cls.name02);
+		console.log(cls.getName02());
+		
+		console.log(classQ.name);
+		console.log(classQ.print()); 
+		
+		cls.printName();
+	}
+	
+
+</script>
+
+</head>
+<body>
+
+	<pre>
+		객체의 구성
+		- 메서드 : 기능 정의 
+		- 속성 : 객체 내부 데이터
+		- this : 객체 내부의 메서드나 속성을 정의할 때 사용
+		- 프로토타입 : 객체의 확장
+	</pre>
+
+	<button onclick="objTest();">객체</button>
+	
+	
+	
+	<br><br><br>
+	<a href="index.html">돌아가기</a>
+
+
+</body>
+</html>

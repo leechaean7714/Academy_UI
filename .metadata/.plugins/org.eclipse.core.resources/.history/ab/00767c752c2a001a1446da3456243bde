@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+    window.onload=function(){/* window.onload = function(){ 시작시 실행될 내용 }*/
+
+    var val = location.search;
+	alert(val);
+	 
+    }
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+
+
+</body>
+</html>

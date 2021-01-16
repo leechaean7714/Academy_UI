@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* body{
+background:url("resources/image/주사위.png");
+background-size: cover;} */
+	div,p{
+		width: 200px;
+		height: 200px;
+		border: 1px solid red;
+	}
+	#bgsize1{
+		background: url("resources/image/주사위.png");
+		background-size: cover;
+		/*cover : 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소합니다. 
+		      가로 세로 비율을 유지합니다. */
+	}
+	#bgsize2{
+		background: url("resources/image/주사위.png");
+		background-size: contain;
+	}
+	#bgsize3{
+		background: url("resources/image/주사위.png");
+		background-size: inherit;
+		/* inherit : 부모 요소의 속성값을 상속받습니다. */
+	}
+	
+	#multibg{
+		background: url("resources/image/Fireball.png"),url("resources/image/주사위.png");
+		background-size: contain;
+	}
+	
+	#bgclip1{
+		border: 10px dotted black;
+		padding: 50px;
+		background-color: skyblue;
+		background-clip: content-box;
+	}
+	#bgclip2{
+		border: 10px dotted black;
+		padding: 50px;
+		background-color: skyblue;
+		background-clip: padding-box;
+	}
+	#bgclip3{
+		border: 10px dotted black;
+		padding: 50px;
+		background-color: skyblue;
+		background-clip: border-box;
+	}
+	
+	#txtshadow{
+		text-shadow: 1px 2px #ccc;
+	}
+	
+	#wrap{
+		 word-wrap: break-word; 
+	}
+	
+	@font-face{
+		font-family: "Goyang";
+		src: url("resources/Goyang.ttf") format("truetype");
+	}
+	#goyang{
+		font-family: "Goyang";
+		font-size: 30px;
+	}
+	
+	
+
+</style>
+
+</head>
+<body>
+
+	<h1>background-size</h1>
+	<div id="bgsize1">cover</div>
+	<div id="bgsize2">contain</div>
+	<div id="bgsize3">inherit</div>
+	
+	
+	<h1>multi-background</h1>
+	<div id="multibg">multi-background</div>
+
+
+	<h1>background-clip</h1>
+	<div id="bgclip1">context-box</div><br>
+	<div id="bgclip2">padding-box</div><br>
+	<div id="bgclip3">border-box</div><br>
+	
+	
+	<h1>text-shadow</h1>
+	<div id="txtshadow">text-shadow</div>
+	
+	
+	<h1>word-wrap</h1>
+	<div id="wrap">dkanrjsk Tjwnaus whgrpTdjdy. duddjfhaks wkrtjdgowntpdy vldhdlsms woALtEK dho dkssjacusksi rmfwkdi</div>
+	
+	
+	<h1>font-face</h1>
+	<div id="goyang">고양시 고양체 이쁘다 ─│┌┐┘└├┬┤┴┼━┃┃┏┓┛┗┣┳┫┻╋┠┯┨┷┿`|±≠┮</div>
+	
+
+	<br/><br/><br/>
+		<a href="index.html">돌아가기</a>
+
+</body>
+</html>

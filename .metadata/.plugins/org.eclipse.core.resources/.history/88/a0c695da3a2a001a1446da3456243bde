@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>@@@@@@@</title>
+</head>
+<body>
+
+<form>
+	<fieldset>
+		<legend>회원 가입</legend>
+		<p>ID:<input type="text" name="id"></p>
+		<p>PW:<input type="password" name="pw"></p>
+		<p>이메일 수신 여부
+			<input type="radio" name="radio" value="y">y
+			<input type="radio" name="radio" value="n">n
+		</p>
+		<p>관심분야<br/>
+			<input type="checkbox" name="cb01" value="HTML">html<br/>
+			<input type="checkbox" name="cb02" value="CSS">css<br/>
+			<input type="checkbox" name="cb03" value="JS">js<br/>
+		</p>
+	</fieldset>
+</form>
+
+</body>
+</html>

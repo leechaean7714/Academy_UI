@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+<form action="html08_form_res.html" method="get"><!-- get/헤더방식과 post/바디방식 방식과 차이  -->
+
+<fieldset>
+<legend>회원가입</legend>
+
+<p>ID:<input type="text" name = "id"/></p>
+<p>PW:<input type="password" name = "pw"/></p>
+
+<p>이메일 수신여부
+<input type="radio" name = "radio" value="y"/>y
+<input type="radio" name = "radio" value="n"/>n    <!--이름이 같아야 한묶음 -->
+
+<!-- 라디오 버튼은 중복 체크 불가! -->
+</p>
+
+<p>관심분야
+<br/>
+<input type="checkbox" name="cb01" value="HTML"/>html<br/>
+<input type="checkbox" name="cb02" value="CSS"/>css<br/>
+<input type="checkbox" name="cb03" value="JavaScript">js<br/>
+
+</p>
+
+<p>
+<input type="submit" value="전송"/>
+<input type="reset" value="취소"/>
+<input type="button" value="그냥 버튼"/>
+
+
+</p>
+
+<p>
+
+
+<input type="file"/>
+<input type="hidden" name="hdd" value="my_hidden_value"/>
+</p>
+
+
+
+
+
+</fieldset>
+
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

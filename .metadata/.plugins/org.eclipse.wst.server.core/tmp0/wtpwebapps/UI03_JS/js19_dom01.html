@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dom01</title>
+
+<script type="text/javascript">
+	
+	function searchPar() {
+		
+		var child02 = document.getElementsByTagName("p")[1];
+		var parent = child02.parentNode;//2를 감싸고고 있는 div태그
+		alert(parent.nodeName);
+	    parent.style.backgroundColor="pink";
+	
+	}
+
+	function searchChi() {
+		
+		var div = document.getElementsByTagName("div");
+		var divChildren = div[0].childNodes;//하나든 100개든 하나라서 리스트가 0번지
+	     alert(divChildren[1].tagName);//node리스트 태그와 태그사이를 텍스트로 만들어 놓음 (공백값)
+		divChildren[1].style.backgroundColor="skyblue";
+		
+		}
+		
+	function test01() {
+		
+		var p = document.getElementsByTagName("p")[3];//////d오타
+		
+		var parent = p.parentNode;
+		/* alert(parent.nodeName); */
+		parent.style.backgroundColor = "green";
+		
+	}
+
+	function test02() {
+		
+		var div= document.getElementsByTagName("div")[2];
+		
+		var child = div.childNodes[3];
+		child.style.fontSize="20pt";
+		
+	}
+	
+</script>
+
+</head>
+<body>
+
+<h1>부모 탐색, 자식 탐색</h1>   <!-- //문서가지고 객체화 시키는 아이-->
+ 
+ <div>
+ 
+	 <p>child01</p>
+	 <p>child02</p>
+	 <p>child03</p>
+ 
+ </div>
+ 
+ <button onclick="searchPar();">부모탐색</button>
+ <button onclick="searchChi();">자식탐색</button>
+
+
+<!-- 문제 -->
+<div>
+<p>test01</p>
+<p>test02</p>
+</div>
+
+<div>
+<p>test03</p>
+<p>test04</p>
+</div>
+
+<h3 onclick="test01();" >1."test01 태그를 포함한 부모태그" 배경색을 적용하기</h3><!-- parentNode -->
+<h3 onclick="test02();">2."마지막 div 태그" 에 포함된 마지막 p태그의 폰트크기를 20pt 적용하자</h3><!-- childNodes -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

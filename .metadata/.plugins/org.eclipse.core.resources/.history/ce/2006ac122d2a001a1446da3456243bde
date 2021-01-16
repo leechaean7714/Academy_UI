@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+    window.onload=function(){/* window.onload = function(){ 시작시 실행될 내용 } 
+      <페이지가 로드되면 자동으로 실행되는 함수를 구현>할 때엔
+            전역 콜백함수인 window.onload 함수를 사용합니다.*/
+    
+    var val = location.search;
+	alert(val);
+	 
+    }
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+
+
+</body>
+</html>

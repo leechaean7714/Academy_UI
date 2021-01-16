@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="html08_form_res.html" method="get">
+		<fieldset>
+			<legend>회원가입</legend>
+			
+			<p>ID : <input type="text" name="id" /></p>
+			<p>PW : <input type="password" name="pw" /></p>
+			<p>이메일 수신여부
+				<input type="radio" name="radio" value="y" checked="checked"/>y
+				<input type="radio" name="radio" value="n"/>n
+				<!-- radio 버튼은 중복 체크 불가! (같은 이름으로 설정했을 때) -->
+			</p>
+			
+			<p>관심분야<br>
+				<input type="checkbox" name = "cb01" value="HTML" checked="checked"/>html<br/>
+				<input type="checkbox" name = "cb02" value="CSS"/>css<br/>
+				<input type="checkbox" name="cb03" value="Javascript">js<br/>
+			</p>
+			
+			<p>
+				<input type="submit" value="전송"/>
+				<input type="reset" value="취소"/>
+				<input type="button" value="그냥 버튼"/>
+			</p>
+			
+			<p>
+				<input type="file"/>
+				<input type="hidden" name="hdd" value="my_hidden_value"/>
+			</p>
+			
+			
+		</fieldset>
+	</form>
+	
+	
+	
+	
+	
+	
+	<br/><br/><br/>
+		<a href="index.html">돌아가기</a>
+
+</body>
+</html>

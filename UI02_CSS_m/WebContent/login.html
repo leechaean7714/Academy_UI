@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+$chWidth: 0.49em;
+$chCount: 9;
+$typeDuration: 180ms * $chCount;
+
+$color: slateblue;
+$bg: #f7f3ff;
+$cursor: scale-color($color, $lightness: -60%);
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: $bg;
+  color: $color;
+  font-family: Rosario, sans-serif;
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.type-animation {
+ 
+  display: inline-flex;
+ 
+  width: 0;
+  overflow: hidden;
+ 
+  padding-right: 0.08em;
+  position: relative;
+
+  &:after {
+    content: "";
+    background: $bg;
+    position: absolute;
+    right: 0;
+    top: -0.05em;
+    bottom: -0.05em;
+    width: 0.08em;
+    border-right: 2px solid transparent;
+  }
+
+ &.animating {
+    animation: type $typeDuration;
+   
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    &:after {
+      $cursorLoopCount: ((($chCount + 1) * 180)/320) + 3;
+      animation: cursor 320ms $cursorLoopCount ease-in-out;
+    }
+  }
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: $bg;
+  }
+  50% {
+    border-color: $cursor;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+$frameSize: 100 / $chCount;
+@keyframes type {
+  @for $ch from 1 to $chCount {
+    $frame: $ch * $frameSize;
+    #{$frame}% {
+      width: $ch * $chWidth;
+    }
+  }
+  100% {
+    width: ($chCount - 1) * $chWidth;
+    padding-right: 0;
+  }
+}
+
+
+
+
+</style>
+
+<script type="text/javascript">
+
+
+
+</script>
+</head>
+<body>
+<h1>My <span class="type-animation animating">Romantic</span> Holiday</h1>
+
+
+</body>
+</html>

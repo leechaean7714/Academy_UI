@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UI04_JQ_m/WebContent/onlyTest.html&apos; to &apos;onlyTest00.html&apos;" description="Rename resource &apos;onlyTest.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/onlyTest.html" name="onlyTest00.html" stamp="1588912503815" updateReferences="true"/>
+</session>

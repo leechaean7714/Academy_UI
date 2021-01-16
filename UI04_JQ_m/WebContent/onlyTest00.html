@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+img {
+	width: 200px;
+	height: 200px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$("input:checkbox").change(
+			"on",
+			function() {
+				$("#testlog").html(
+						"<br/>check1.attr('checked'):"
+								+ $("#test1").attr("checked")
+								+ "<br>check2.attr('checked'):"
+								+ $("#test2").attr("checked")
+								+ "<br>check1.prop('checked'):"
+								+ $("#test1").prop("checked")
+								+ "<br>check1.is(':checked'):"
+								+ $("#test1").is(":checked"));
+			});
+</script>
+</head>
+<body>
+
+	<input type="checkbox" id="test1" checked="checked">test1
+	<input type="checkbox" id="test2">test2
+	<br>
+	<div id="testlog"></div>
+
+</body>
+</html>

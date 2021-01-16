@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style type="text/css">
+.box {
+	border: 2px solid red;
+}
+
+#menu {
+	background: skyblue;
+	text-align: right;
+}
+
+a {
+	text-decoration: none;
+	font-size: 20pt;
+}
+
+#menu div {
+	display: inline-block;
+	margin-right: 10px;
+}
+</style>
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var $box = $("<div>").addClass("box");
+		$(".sub_menu:first").wrap($box);
+		// wrap = 앞에 선택되어진 ".sub_menu:first"를 $box로 감싸라(부모객체를 만들어라)
+
+		$(".sub_menu").click(function() {
+			
+			$(".sub_menu").each(function() {
+				if ($(this).parent().is(".box")) {
+					$(this).unwrap(".box");
+				}
+			});
+			
+			$(this).wrap($box);
+		});
+
+		$("a").wrapInner("<span></span>");
+		// a태그의 자식요소들을 각각 span으로 감싸준다.
+
+		$("pre").wrapAll("<b></b>");
+		// 해당 태그들을 묶어서 한번에 전체로
+
+	});
+</script>
+</head>
+<body>
+
+	<div id="menu">
+		<div class="sub_menu">
+			<a href="#"><span>국비지원</span></a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">훈련검색</a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">기관검색</a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">질문답변</a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">자격증</a>
+		</div>
+	</div>
+
+	<pre>a</pre>
+	<pre>b</pre>
+	<pre>c</pre>
+	<pre>d</pre>
+
+</body>
+</html>
